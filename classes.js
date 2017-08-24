@@ -113,17 +113,18 @@ class ProgressiveManager {
   hire (employee) {
     this.reports.push(employee);
 
-    if(this.reports.length === 0) {
+    var numOfEmployees = this.reports.length;
+    if(numOfEmployees === 0) {
       this.title = 'Not a manager';
-    } else if (this.reports.length >= 1 & this.reports.length <= 3 ) {
+    } else if (numOfEmployees >= 1 & numOfEmployees <= 3 ) {
       this.title = 'Barely Manager';
-    } else if (this.reports.length >= 4 & this.reports.length <= 10 ) {
+    } else if (numOfEmployees >= 4 & numOfEmployees <= 10 ) {
       this.title = 'Mostly Manager';
-    } else if (this.reports.length >= 11 & this.reports.length <= 50 ) {
+    } else if (numOfEmployees >= 11 & numOfEmployees <= 50 ) {
       this.title = 'Manager';
-    } else if (this.reports.length >= 51 & this.reports.length <= 100 ) {
+    } else if (numOfEmployees >= 51 & numOfEmployees <= 100 ) {
       this.title = 'Manager Plus';
-    } else if (this.reports.length > 100 ) {
+    } else if (numOfEmployees > 100 ) {
       this.title = 'Bestest Manager';
     }
   }
@@ -133,17 +134,18 @@ class ProgressiveManager {
 
     this.bonus += 100;
 
-    if(this.reports.length === 0) {
+    var numOfEmployees = this.reports.length;
+    if(numOfEmployees === 0) {
       this.title = 'Not a manager';
-    } else if (this.reports.length >= 1 & this.reports.length <= 3 ) {
+    } else if (numOfEmployees >= 1 & numOfEmployees <= 3 ) {
       this.title = 'Barely Manager';
-    } else if (this.reports.length >= 4 & this.reports.length <= 10 ) {
+    } else if (numOfEmployees >= 4 & numOfEmployees <= 10 ) {
       this.title = 'Mostly Manager';
-    } else if (this.reports.length >= 11 & this.reports.length <= 50 ) {
+    } else if (numOfEmployees >= 11 & numOfEmployees <= 50 ) {
       this.title = 'Manager';
-    } else if (this.reports.length >= 51 & this.reports.length <= 100 ) {
+    } else if (numOfEmployees >= 51 & numOfEmployees <= 100 ) {
       this.title = 'Manager Plus';
-    } else if (this.reports.length > 100 ) {
+    } else if (numOfEmployees > 100 ) {
       this.title = 'Bestest Manager';
     }
   }
