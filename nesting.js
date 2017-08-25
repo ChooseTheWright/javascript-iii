@@ -141,12 +141,11 @@ var myCar = {
 }
 
 // Code here
-
-
-
-
-
-
+function recordCleaner () {
+  for(var i = 0; i < myCar.accidents.length; i++) {
+    myCar.accidents[i].atFaultForAccident = false;
+  }
+};
 
 
 
@@ -160,3 +159,12 @@ var myCar = {
 // 4. Return the modified numsArr.
 
 var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
+
+var looper = () => {
+  for (var i = 0; i < numsArr.length; i++) {
+    for (var j = 0; j < numsArr[i].length; j++) {
+      numsArr[i][j] = numsArr[i][j] % 2 === 0 ? 'even': 'odd';
+    }
+  }
+  return numsArr
+}
