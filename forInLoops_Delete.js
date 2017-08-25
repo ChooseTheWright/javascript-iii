@@ -74,7 +74,15 @@ var double = (obj) => {
 // Write a function called secrets that will take in an object. Create an empty string variable. Write a for in loop that loops over the object. If the property name starts with an 'sh', concatenate the value to the string variable. By the end of the for in loop, you should have a sentence, return that sentence.
 
 // CODE HERE
-
+var secrets = (secretObj) => {
+  var sentanceStr = '';
+  for (var key in secretObj) {
+    if (key.substring(0,2) === 'sh') {
+      sentanceStr += secretObj[key];
+    }
+  }
+  return sentanceStr;
+}
 
 // ========================
 
@@ -99,7 +107,10 @@ var double = (obj) => {
 // Write a function called removePassword that takes in an object. Delete the property password and return the object.
 
 // CODE HERE
-
+function removePassword (obj) {
+  delete obj.password;
+  return obj;
+}
 
 
 // ========================
