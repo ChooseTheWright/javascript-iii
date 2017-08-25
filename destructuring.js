@@ -62,7 +62,15 @@ var ingredients = (ingredientsObj) => {
 // Write a function called largeNumbers that will take a destructured object as it's parameter. The object properties will be named first, second, and third and their values will be numbers. Find the smallest number of the three and return that number.
 
   // CODE HERE
-
+var largeNumbers = ({first, second, third}) => {
+  if (first < second && first < third) {
+    return first;
+  } else if (second < first && second < third) {
+    return second;
+  } else if (third < first && third < second){
+    return third;
+  }
+}
 
 // ========================
 
@@ -70,3 +78,12 @@ var ingredients = (ingredientsObj) => {
 // Write a function called numberGroups that will take a destructured object as it's parameter. The object properties will be named a, b, and c and their values will be arrays of numbers. Find the longest array and return that array.
 
   // CODE HERE
+  var numberGroups = ({a, b, c}) => {
+    if (a.length > b.length && a.length > c.length) {
+      return a;
+    } else if (b.length > a.length && b.length > c.length) {
+      return b;
+    } else if (c.length > a.length && c.length > b.length){
+      return c;
+    }
+  }
